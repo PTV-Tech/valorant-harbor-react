@@ -70,6 +70,7 @@ const News = () => {
                             <div className={`item ${slide.class}`}>
                                 <h5>{slide.name}</h5>
                                 <h6>{slide.subText}</h6>
+                                {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                                 <a onClick={() => toggleActive(slide.embed)}>
                                     <img src={slide.src} alt="" className="img-fluid" />
                                 </a>  
@@ -81,6 +82,7 @@ const News = () => {
                     ))}
                 </Row>
                 <div className="text-center">
+                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
                     <a href="" className="btn-news">TRẢI NGHIỆM NGAY</a>
                 </div>
             </Container>

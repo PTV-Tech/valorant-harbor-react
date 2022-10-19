@@ -1,5 +1,4 @@
 import React from "react";
-import {Container} from 'react-bootstrap';
 import Logo from '../../images/logo-v.png';
 import LogoWhite from '../../images/logo-v-white.png';
 import LogoFull from '../../images/logo-full.png';

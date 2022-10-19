@@ -1,5 +1,4 @@
 import React from "react";
-import {Container} from 'react-bootstrap';
 import Face from '../../images/face.png';
 import Youtube from '../../images/youtube.png';
 import Tiktok from '../../images/tiktok.png';
@@ -29,7 +28,9 @@ const Footer = () => {
         </div>
         <div className="footer-bottom text-center">
           <div className="d-flex justify-content-center align-items-center">
+            {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
             <a href="" rel="noopener noreferrer"><img src={Riot} width="180px" height="80px" alt="" class="mr-3" /></a>
+            {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
             <a href="" rel="noopener noreferrer"><img src={VNG} alt="" width="71px" height="49px" /></a>
           </div>
           <p className="mt-3 mb-3">&copy; 2022 Riot Games, Inc.</p>

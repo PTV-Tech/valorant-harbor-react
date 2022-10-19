@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Download from '../../images/download.png';
 import Face from '../../images/face.png';
 import Youtube from '../../images/youtube.png';
