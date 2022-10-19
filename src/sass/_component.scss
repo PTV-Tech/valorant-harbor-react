@@ -1,0 +1,109 @@
+.link-button{
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    text-decoration: none;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        height: calc(50% - 0.4rem);
+        width: 100%;
+        border: 1px solid #035d67;
+        left: 0;
+        top: 0;
+        border-bottom: 0;
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        height: calc(50% - 0.4rem);
+        width: 100%;
+        border: 1px solid #035d67;
+        left: 0;
+        bottom: 0;
+        border-top: 0;
+    }
+    .button {
+        min-width: 15rem;
+        display: block;
+        background-color: #035d67;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: .3s;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        span{
+            position: relative;
+            z-index: 2;
+            color: $color-white;
+            display: block;
+            width: 100%;
+            padding: 7px 0;
+        }
+        &::after{
+            position: absolute;
+            transition: .5s;
+            content: '';
+            width: 0;
+            left: 50%;
+            bottom: 0;
+            height: 3px;
+            background: $color-white;
+            height: 120%;
+            left: -10%;
+            transform: skewX(-10deg);
+            z-index: 1;
+        }
+        &:hover{
+            cursor: pointer;
+            span{
+                color: $color-blue;
+            }
+            &::after{
+                left: -10%;
+                width: 120%;
+            }
+        }
+    }
+    .border-button{
+        border: 1px solid #035d67;
+        padding: 2px;
+        border-radius: 3px;
+    }
+}
+
+//Modal
+@media (min-width: 576px){
+    .modal-dialog{
+        max-width: 800px;
+    }
+}
+.modal-content{
+    background: url(../images/bg-pop-up.png) no-repeat top center;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.modal-body{
+    padding: 15px 25px 5px 25px;
+    video{
+        width: 100%;
+    }
+}
+
+//Tabs
+.nav-pills{
+    margin-left: 30px;
+}
+.nav-pills .nav-link{
+    padding: 0 5px;
+    &.active{
+        background: none;
+    }
+}

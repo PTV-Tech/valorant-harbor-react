@@ -1,0 +1,167 @@
+/* #region Variables */
+//Colors Main
+$color-white: #ece8e1;
+$color-black: #000;
+$color-red: #fd7175;
+$color-blue: #035d67;
+$color-dark-blue: #0f1923;
+
+
+//Background main
+.bg-white{
+    background-color: $color-white !important;
+}
+.bg-black{
+    background-color: $color-black !important;
+}
+.bg-red{
+    background-color: $color-red !important;
+}
+.bg-blue{
+    background-color: $color-blue !important;
+}
+//Text color main
+.color-white{color:$color-white !important;}
+.color-black{color:$color-black !important;}
+.color-red{color:$color-red !important;}
+.color-blue{color:$color-blue !important;}
+.color-dark-blue{color: $color-dark-blue !important;}
+/* #endregion */
+
+/* #region Function */
+@function rem-calc($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+  }
+/* #endregion */
+
+/* #region Global */
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+#root { 
+    height: 100%
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body{
+    font-family: 'Myriad Pro';
+    width: 100%;
+    font-size: 16px;
+    color: $color-white;
+    line-height: 28px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+*{outline: none!important;}
+
+a{
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.color-light{
+    color: #d9cba7;
+}
+.section{
+    padding: 3% 0;
+    position: relative;
+    @media (max-width: 1023px) {
+        padding: 50px 0;
+    }
+}
+
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.border-images{
+    border: 2px solid $color-white;
+}
+
+.narrow{
+    width: 60%;
+    @media (max-width: 991px) {
+        width: 100%;
+    }
+}
+.mx-auto{
+    margin: 0 auto;
+}
+
+/* #endregion */
+
+/* #region Typography */
+.h1,h1{
+    font-family: 'SVN-Tungsten';
+    font-size: 120px;
+    @media (max-width: 767px) {
+        font-size: 50px;
+    }
+}
+
+.h3, h3{
+    font-family: 'SVN-Tungsten';
+    font-size: 70px !important;
+    letter-spacing: 3px;
+    @media (max-width: 767px) {
+        font-size: 40px !important;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+/* #endregion */ 
+
+/* #region Spacing */
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}px !important;
+    }
+    .p-#{$space} {
+        padding: #{$space}px !important;
+    }  
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+        }
+    
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+/* #endregion */  
+@media (min-width: 1200px){
+    .container{
+        max-width: 1240px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 1200px;
+    }
+}
