@@ -2,7 +2,9 @@
   width: 100%;
   height: 100%;
   .swiper-slide{
-    pointer-events: none;
+    @media (min-width: 1023px) {
+      pointer-events: none;
+    }
   }
 }
 .jquery-ripples{
