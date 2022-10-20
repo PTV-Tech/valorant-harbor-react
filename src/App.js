@@ -24,6 +24,7 @@ function App() {
         preventClicks={true}
         preventClicksPropagation={true}
         modules={[Mousewheel]}
+        freeMode
       >
         <SwiperSlide>
           <Banner />
