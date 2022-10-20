@@ -344,7 +344,7 @@
       width: 50%;
     }
     @media (max-width: 1023px) {
-      width: 90%;
+      width: 70%;
     }
   }
 }
@@ -399,7 +399,7 @@
           margin-top: 10px;
           margin-bottom: 0;
           @media (max-width: 1023px) {
-            font-size: 20px;
+            font-size: 14px;
           }
         }
         h6{
@@ -423,13 +423,13 @@
           line-height: 14px;
           margin-bottom: 0;
           @media (max-width: 1023px) {
-            font-size: 9px;
+            font-size: 8px;
             padding: 5px 10px;
             margin-bottom: 0;
           }
           @media (max-width: 375px) {
-            font-size: 8px;
-            line-height: 10px;
+            font-size: 7px;
+            line-height: 8px;
           }
         }
         img{
