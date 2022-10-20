@@ -4,8 +4,6 @@ import Image1 from '../../images/icon-1.png';
 import Image2 from '../../images/icon-2.png';
 import Image3 from '../../images/icon-3.png';
 import Image4 from '../../images/icon-4.png';
-import Image5 from '../../images/pop-up-image-1.png';
-
 
 const Profile = () => {
 
@@ -22,25 +20,25 @@ const Profile = () => {
     {
       id: 'first',
       name: "Thủy Triều Dâng Trào ",
-      src: Image5,
+      src: 'https://i.ytimg.com/vi/01dQgCOYUoM/maxresdefault.jpg',
       embed: "https://www.youtube.com/embed/01dQgCOYUoM"
     },
     {
       id: 'second',
       name: "Thủy Khiên",
-      src: Image5,
+      src: 'https://i.ytimg.com/vi/JJ5s5xXXyq4/maxresdefault.jpg',
       embed: "https://www.youtube.com/embed/JJ5s5xXXyq4"
     },
     {
       id: 'third',
       name: "Thác Đổ",
-      src: Image5,
+      src: 'https://i.ytimg.com/vi/PSrdDNDAk3k/maxresdefault.jpg',
       embed: "https://www.youtube.com/embed/PSrdDNDAk3k"
     },
     {
       id: 'four',
       name: "Thủy Nộ",
-      src: Image5,
+      src: 'https://i.ytimg.com/vi/mYyCXjyQt54/maxresdefault.jpg',
       embed: "https://www.youtube.com/embed/mYyCXjyQt54"
     },
   ];
@@ -78,10 +76,12 @@ const Profile = () => {
               {slidesData.map((slide, idx) => (
                 <Tab.Content key={slide.id}>
                   <Tab.Pane eventKey={slide.id}>
-                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a onClick={() => toggleActive(slide.embed)}>
-                      <img src={slide.src} alt="" className="img-fluid" />
-                    </a>  
+                      <div className="wrap-image">
+                        <img src={slide.src} alt=""/>
+                      </div>
+                    </a>
                   </Tab.Pane>
                 </Tab.Content>
               ))}
@@ -112,7 +112,7 @@ const Profile = () => {
       <Modal show={show}
         onHide={() => setShow(false)} centered>
         <Modal.Body>
-          <iframe src={selectedEmbed} width="100%" height="500px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src={selectedEmbed} width="100%" height="auto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </Modal.Body>
       </Modal>
 

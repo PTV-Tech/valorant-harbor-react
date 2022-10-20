@@ -17,7 +17,7 @@ const News = () => {
       setShow(true)
       setSelectedEmbed(embed)
     }
-  
+
     const slidesData = [
       {
         id: 1,
@@ -70,10 +70,14 @@ const News = () => {
                             <div className={`item ${slide.class}`}>
                                 <h5>{slide.name}</h5>
                                 <h6>{slide.subText}</h6>
-                                {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                                <a onClick={() => toggleActive(slide.embed)}>
+                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                <a onClick={() => {
+                                    if (idx !== 3) {
+                                        toggleActive(slide.embed)
+                                    }
+                                }}>
                                     <img src={slide.src} alt="" className="img-fluid" />
-                                </a>  
+                                </a>
                                 <div className="description">
                                     <p>{slide.content}</p>
                                 </div>
@@ -82,15 +86,14 @@ const News = () => {
                     ))}
                 </Row>
                 <div className="text-center">
-                    {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                    <a href="" className="btn-news">TRẢI NGHIỆM NGAY</a>
+                    <a href="https://valorant.zing.vn/vi-vn/download" className="btn-news">TRẢI NGHIỆM NGAY</a>
                 </div>
             </Container>
         </section>
         <Modal show={show}
         onHide={() => setShow(false)} centered>
             <Modal.Body>
-            <iframe src={selectedEmbed} width="100%" height="500px" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src={selectedEmbed} width="100%" height="auto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Modal.Body>
         </Modal>
         </>

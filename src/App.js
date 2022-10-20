@@ -21,8 +21,9 @@ function App() {
         slidesPerView={1}
         spaceBetween={30}
         mousewheel={true}
+        preventClicks={true}
+        preventClicksPropagation={true}
         modules={[Mousewheel]}
-        className="mySwiper"
       >
         <SwiperSlide>
           <Banner />

@@ -1,6 +1,9 @@
 .swiper {
   width: 100%;
   height: 100%;
+  .swiper-slide{
+    pointer-events: none;
+  }
 }
 .jquery-ripples{
   height: 100%;
@@ -266,8 +269,35 @@
   }
   .col-right{
     flex: 0 0 73%;
-    img{
-      transform: translateY(40px);
+    transform: translateY(43px);
+    .wrap-image{
+      position: relative;
+      background: url('../images/bg-thumbnail.png') no-repeat top center;
+      background-size: 100% 100%;
+      display: flex;
+      justify-content: center;
+      &::before{
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        top: 40%;
+        margin: 0 auto;
+        width: 80px;
+        height: 80px; 
+        background: url(../images/play-button.png) no-repeat top center;
+        background-size: contain;
+        @media (max-width: 1023px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      img{
+        border: 2px solid #035d67;
+        width: 60%;
+        height: 40%;
+      }
     }
   }
 }
@@ -285,8 +315,8 @@
     font-size: 16px;
     color: $color-black;
     font-weight: 600;
-    line-height: 25px;
-    padding: 0 35px;
+    line-height: 22px;
+    padding: 0 27px;
     &:first-child{
       text-transform: uppercase;
       font-size: 25px;

@@ -28,10 +28,8 @@ const Footer = () => {
         </div>
         <div className="footer-bottom text-center">
           <div className="d-flex justify-content-center align-items-center">
-            {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-            <a href="" rel="noopener noreferrer"><img src={Riot} width="180px" height="80px" alt="" class="mr-3" /></a>
-            {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-            <a href="" rel="noopener noreferrer"><img src={VNG} alt="" width="71px" height="49px" /></a>
+            <img src={Riot} width="180px" height="80px" alt="" className="mr-3" />
+            <img src={VNG} alt="" width="71px" height="49px" />
           </div>
           <p className="mt-3 mb-3">&copy; 2022 Riot Games, Inc.</p>
           <p>Công Ty Cổ Phần VNG. Địa chỉ: Lô 03b-04-05-06-07, khu Công Nghiệp,</p>
@@ -44,7 +42,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="text-center mt-4">
-            <img src={Rule} alt="" width="180px" height="auto" class="border-images logo-18" />
+            <img src={Rule} alt="" width="180px" height="auto" className="border-images logo-18" />
           </div>
         </div>
       </section>
