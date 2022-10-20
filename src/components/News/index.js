@@ -93,7 +93,12 @@ const News = () => {
         <Modal show={show}
         onHide={() => setShow(false)} centered>
             <Modal.Body>
-            <iframe src={selectedEmbed} width="100%" height="auto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div className="container-iframe">
+                    <iframe src={selectedEmbed} width="100%" height="auto" title="YouTube video player" frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen className="responsive-iframe" />
+
+                </div>
             </Modal.Body>
         </Modal>
         </>
