@@ -95,7 +95,7 @@ const Profile = () => {
               </Tab.Pane>
               <Tab.Pane eventKey="second">
                 <p>Q - Thủy Khiên</p>
-                <p>TRANG BỊ 1 quả cầu thủy khiên. Nhấn BẮN để ném. Nhấn CHẾ ĐỘ PHỤ để ném tầm thấp. Khi chạm đất, tạo ra một lớp khiên nước có khả năng chặn đường đạn</p>
+                <p>Khi chạm đất, tạo ra một lớp khiên nước có thể bị phá huỷ và có khả năng chặn đường đạn.</p>
               </Tab.Pane>
               <Tab.Pane eventKey="third">
                 <p>C - Thác Đổ</p>
