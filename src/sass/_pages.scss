@@ -228,7 +228,6 @@
   padding-left: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   @media (max-width: 1023px) {
     flex-direction: column-reverse;
     padding-left: 0;
@@ -260,9 +259,12 @@
     
   }
   .col-left{
-    flex: 0 0 27%;
+    min-width: 360px;
+    @media (min-height: 768px) {
+      min-width: 500px;
+    }
     @media (max-width: 1023px) {
-      margin-top: 60px;
+      margin-top: 80px;
       h3{
         font-size: 30px !important;
         text-align: center;
@@ -270,7 +272,6 @@
     }
   }
   .col-right{
-    flex: 0 0 73%;
     transform: translateY(43px);
     .wrap-image{
       position: relative;
@@ -312,6 +313,7 @@
   @media (max-width: 1023px) {
     transform: unset;
     margin-left: 45px;
+    margin-top: 25px;
   }
   p{
     font-size: 16px;
@@ -411,12 +413,12 @@
           font-weight: bold;
           margin-top: 5px;
           @media (max-width: 1023px) {
-            font-size: 11px;
+            font-size: 7px;
             margin-top: 0;
             margin-bottom: 0;
           }
           @media (max-width: 375px) {
-            font-size: 8px;
+            font-size: 7px;
           }
         }
         p{
@@ -478,14 +480,28 @@
   }
   @media (max-width: 1023px) {
     text-align: center;
-    margin-top: 250px;
-  }
-  @media (max-width: 375px) {
-    margin-top: 100px;
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    .link-button .button{
+      background-color: #fff;
+      span{
+        color: #000;
+      }
+    }
+    .link-button .border-button{
+      border-color: $color-white;
+    }
+    .link-button::before, .link-button::after{
+      border-color: $color-white;
+    }
   }
   .group-text{
     @media (max-width: 1023px) {
-      transform: translateY(200px);
+      transform: unset;
+      margin-bottom: 20px;
     }
   }
   .full-logo{
@@ -523,7 +539,7 @@
     }
     @media (max-width: 1023px) {
       color: $color-white;
-      margin-bottom: 250px;
+      margin-bottom: 0;
       font-size: 20px;
     }
   }
@@ -549,7 +565,7 @@
     line-height: 40px;
     font-size: 14px;
     margin-top: 0;
-    transform: translateY(10px);
+    transform: translateY(-3px);
   }
   @media (max-width: 375px) {
     transform: translateY(-5px);
