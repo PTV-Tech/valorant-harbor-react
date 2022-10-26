@@ -86,7 +86,7 @@ const News = () => {
                     ))}
                 </Row>
                 <div className="text-center">
-                    <a href="https://valorant.zing.vn/vi-vn/download" className="btn-news">TRẢI NGHIỆM NGAY</a>
+                    <a href="https://valorant.zing.vn/vi-vn/download" className="btn-news" target="_blank"  rel="noopener noreferrer">TRẢI NGHIỆM NGAY</a>
                 </div>
             </Container>
         </section>

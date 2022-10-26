@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="video-link">
           <div className="bg-button">
-            <a href="https://www.facebook.com/VALORANTvn" target="_blank" className="link-button" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/VALORANTvn" className="link-button" target="_blank"  rel="noopener noreferrer">
               <div className="border-button">
                 <div className="button"><span>KHÁM PHÁ NGAY</span></div>
               </div>
