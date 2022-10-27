@@ -225,7 +225,7 @@
   color: $color-dark-blue;
   font-weight: 700;
   @media (max-width: 767px) {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
   }
 }
@@ -258,7 +258,7 @@
     }
     @media (min-height: 768px) {
       img{
-        width: 105px;
+        width: 90px;
       }
     }
     
@@ -271,7 +271,7 @@
     @media (max-width: 1023px) {
       margin-top: 20px;
       h3{
-        font-size: 30px !important;
+        font-size: 25px !important;
         text-align: center;
       }
     }
