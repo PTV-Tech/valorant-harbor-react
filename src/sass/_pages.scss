@@ -129,7 +129,7 @@
     justify-content: center;
     align-items: center;
     @media (max-width: 767px) {
-      bottom: 20%;
+      bottom: 30%;
       animation: unset;
     }
   }
@@ -489,7 +489,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 100px;
+    bottom: 30%;
     .link-button .button{
       background-color: #fff;
       span{
