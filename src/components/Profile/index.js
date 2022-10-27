@@ -45,7 +45,7 @@ const Profile = () => {
 
   return (
     <>
-      <section className="section bg-profile">
+      <section className="section bg-profile" style={{}}>
         {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
         <h3 className="text-center color-dark-blue m-b-0 m-t-0">HARBOR<span className="color-light p-l-30 p-r-30">//</span>TIỂU SỬ</h3>
         <Container>
