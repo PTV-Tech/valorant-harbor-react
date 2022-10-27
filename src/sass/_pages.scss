@@ -269,7 +269,7 @@
       min-width: 500px;
     }
     @media (max-width: 1023px) {
-      margin-top: 80px;
+      margin-top: 20px;
       h3{
         font-size: 30px !important;
         text-align: center;
@@ -278,6 +278,9 @@
   }
   .col-right{
     transform: translateY(43px);
+    @media (max-width: 1023px) {
+      transform: unset
+    }
     .wrap-image{
       position: relative;
       background: url('../images/bg-thumbnail.png') no-repeat top center;
@@ -362,6 +365,9 @@
   padding-top: 25px;
   @media (min-height: 768px) {
     padding-top: 80px;
+  }
+  @media (max-width: 1023px) {
+    padding-top: 20px;
   }
   .list-news{
     display: flex;
